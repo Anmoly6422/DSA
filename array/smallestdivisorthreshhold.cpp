@@ -12,7 +12,7 @@ int sumbydiv(vector<int> &arr,int div){
     return sum;
 }
 int smalldivisor(vector<int> &arr,int threshold){
-    int low=0,high=*max_element(arr.begin(),arr.end());
+    int low=1,high=*max_element(arr.begin(),arr.end());
     while(low<=high){
         int mid=(low+high)/2;
         if(sumbydiv(arr,mid)<=threshold){
